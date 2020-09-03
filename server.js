@@ -13,8 +13,8 @@ mongoose.connect(
   () => console.log("DB connected 🦥")
 );
 
+// DB Pagination Function
 const paginatedResults = (model) => {
-  // Create
   return async (req, res, next) => {
     const page = Number(req.query.page);
     const limit = Number(req.query.limit);
